@@ -807,7 +807,7 @@ class NXOSDriver(NXOSDriverBase):
 
     def get_interfaces_ip(self):
         interfaces_ip = {}
-        ipv4_command = 'show ip interface'
+        ipv4_command = 'show ip interface vrf all'
         ipv4_interf_table_vrf = self._get_command_table(ipv4_command, 'TABLE_intf', 'ROW_intf')
 
         for interface in ipv4_interf_table_vrf:
